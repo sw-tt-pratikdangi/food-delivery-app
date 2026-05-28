@@ -1,0 +1,87 @@
+# =========================
+# 🔹 ROOT LEVEL
+# =========================
+node_modules/
+.env
+
+# =========================
+# 🔹 CLIENT (React)
+# =========================
+client/node_modules/
+client/build/
+client/.env
+client/.cache/
+
+# React logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# =========================
+# 🔹 SERVER (Node/Express)
+# =========================
+server/node_modules/
+server/build/
+server/dist/
+server/.env
+
+# Logs
+server/logs/
+*.log
+
+# =========================
+# 🔹 COMMON BUILD FILES
+# =========================
+build/
+dist/
+.cache/
+
+# =========================
+# 🔹 TEST COVERAGE
+# =========================
+coverage/
+
+# =========================
+# 🔹 OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🔹 IDE / EDITOR
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# 🔹 TEMP FILES
+# =========================
+.tmp/
+.temp/
+
+# =========================
+# 🔹 DATABASE FILES
+# =========================
+*.sqlite
+*.db
+
+# =========================
+# 🔹 DEBUG FILES
+# =========================
+*.pid
+*.seed
+
+# =========================
+# 🔹 ARCHIVES
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# 🔹 OPTIONAL (keep lock files usually)
+# =========================
+# package-lock.json
+# yarn.lock
