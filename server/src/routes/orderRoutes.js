@@ -1,12 +1,10 @@
 const express = require('express');
 
 const {
-  getFoods,
-  getFoodById,
-  createFood,
-  updateFood,
-  deleteFood,
-} = require('../controllers/foodController');
+  createOrder,
+  getMyOrders,
+  updateOrderStatus,
+} = require('../controllers/orderController');
 
 const {
   protect,
@@ -18,29 +16,23 @@ const {
 
 const router = express.Router();
 
-router.get('/', getFoods);
-
-router.get('/:id', getFoodById);
-
 router.post(
   '/',
   protect,
-  admin,
-  createFood
+  createOrder
+);
+
+router.get(
+  '/my-orders',
+  protect,
+  getMyOrders
 );
 
 router.put(
   '/:id',
   protect,
   admin,
-  updateFood
-);
-
-router.delete(
-  '/:id',
-  protect,
-  admin,
-  deleteFood
+  updateOrderStatus
 );
 
 module.exports = router;

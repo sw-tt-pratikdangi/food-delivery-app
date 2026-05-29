@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom';
 
 import { useAuth } from '../context/AuthContext';
 
+import { useCart } from '../context/CartContext';
+
 function Navbar() {
   const { user, logout } = useAuth();
+  const { cartItems } = useCart();
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
@@ -22,6 +25,20 @@ function Navbar() {
               className="font-medium"
             >
               Profile
+            </Link>
+
+            <Link
+              to="/foods"
+              className="font-medium"
+            >
+              Foods
+            </Link>
+
+            <Link
+              to="/cart"
+              className="font-medium"
+            >
+              Cart ({cartItems.length})
             </Link>
 
             <button

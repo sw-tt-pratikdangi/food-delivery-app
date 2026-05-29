@@ -21,12 +21,22 @@ function Home() {
           </p>
 
           {user ? (
+            <div className="flex justify-center gap-4">
             <Link
               to="/profile"
               className="bg-white text-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
               Go To Profile
             </Link>
+
+            <Link
+              to="/foods"
+              className="bg-white text-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+            >
+              Explore Foods
+            </Link>
+            </div>
+            
           ) : (
             <div className="flex justify-center gap-4">
               
@@ -43,6 +53,7 @@ function Home() {
               >
                 Register
               </Link>
+              
             </div>
           )}
         </div>

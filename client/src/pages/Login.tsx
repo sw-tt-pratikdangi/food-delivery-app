@@ -35,7 +35,11 @@ function Login() {
 
       setUser(data);
 
-      navigate('/');
+      if (data.isAdmin) {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     } catch (error) {
       console.log(error);
     }
